@@ -16,8 +16,8 @@ Website portfolio cá nhân giới thiệu Trần Lưu Thiện Nhân, các kỹ 
 
 ## Công nghệ sử dụng
 
-- **HTML5:** cấu trúc và nội dung trang.
-- **CSS3:** giao diện responsive, Flexbox, Grid và hiệu ứng.
+- **HTML:** cấu trúc và nội dung trang.
+- **CSS:** giao diện responsive, Flexbox, Grid và hiệu ứng.
 - **JavaScript thuần (ES6+):** hiệu ứng cuộn trang và kiểm tra biểu mẫu.
 - **Docker và Nginx (tùy chọn):** chạy website trong container.
 
