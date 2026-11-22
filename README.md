@@ -1,21 +1,3 @@
-Read 
-Completed with input: {
-  "path": "D:\\Bài tập lớn Thiết kế web\\My-CV-kopinchon\\README.md"
-}
-
-"Read" failed
-Completed with input: {
-  "path": "D:\\Bài tập lớn Thiết kế web\\My-CV-kopinchon\\README.md",
-  "view_range": [
-    1,
-    35
-  ]
-}
-Tool execution failed: view_range out of bounds
-
-Tôi không thể ghi trực tiếp vào tệp trong phiên này. Dưới đây là nội dung hoàn chỉnh để thay thế trong `README.md`, gồm mục **Liên hệ với tôi** và hướng dẫn cho Windows, macOS, Linux, Docker.
-
-````markdown
 # Portfolio CV — Trần Lưu Thiện Nhân
 
 ## Mô tả dự án
