@@ -25,7 +25,7 @@
       <!-- Thương hiệu cá nhân -->
       <a class="brand" href="#top" aria-label="Về đầu trang">
         <span class="brand-mark" aria-hidden="true">A</span>
-        <span class="brand-name">Trần Lưu Thiện Nhân14</span>
+        <span class="brand-name">Trần Lưu Thiện Nhân</span>
       </a>
 
       <!-- NAV dùng Flexbox (xem styles.css) -->
@@ -73,10 +73,10 @@
     <!-- ----- SECTION: Kỹ năng ----- -->
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Kỹ năng</h2>
-        <p class="section-sub">Những công nghệ và kỹ năng tôi sử dụng thường xuyên.</p>
+        <h2 class="section-title reveal">Kỹ năng</h2>
+        <p class="section-sub reveal">Những công nghệ và kỹ năng tôi sử dụng thường xuyên.</p>
 
-        <ul class="skill-grid">
+        <ul class="skill-grid reveal-child">
           <li class="skill-chip">HTML5</li>
           <li class="skill-chip">CSS3 / Flexbox / Grid</li>
           <li class="skill-chip">JavaScript (ES6+)</li>
@@ -90,11 +90,11 @@
     <!-- ----- SECTION: Dự án (danh sách thẻ dùng CSS Grid) ----- -->
     <section id="projects" class="section section-muted">
       <div class="container">
-        <h2 class="section-title">Dự án tiêu biểu</h2>
-        <p class="section-sub">Một vài sản phẩm tôi đã thực hiện.</p>
+        <h2 class="section-title reveal">Dự án tiêu biểu</h2>
+        <p class="section-sub reveal">Một vài sản phẩm tôi đã thực hiện.</p>
 
         <!-- .project-grid dùng CSS Grid (xem styles.css) -->
-        <div class="project-grid">
+        <div class="project-grid reveal-child">
 
           <!-- Mỗi thẻ là một <article> độc lập, có thể đứng riêng -->
           <article class="card">
@@ -169,18 +169,137 @@
         </div><!-- /.project-grid -->
       </div>
     </section>
-
+    
     <!-- ----- SECTION: Liên hệ ----- -->
-    <section id="contact" class="section">
-      <div class="container contact-inner">
-        <h2 class="section-title">Liên hệ</h2>
-        <p class="section-sub">Mở cho các cơ hội thực tập &amp; việc làm Frontend.</p>
+    <section id="contact" class="section contact-section">
+      <div class="container">
 
-        <ul class="contact-list">
-          <li><span class="contact-label">Email</span> <a href="mailto:zenotnhan@gmail.com">zenotnhan@gmail.com</a></li>
-          <li><span class="contact-label">GitHub</span> <a href="#">github.com/Kopinchon</a></li>
-          <li><span class="contact-label">LinkedIn</span> <a href="#">linkedin.com/in/Trần Lưu Thiện Nhân</a></li>
-        </ul>
+        <!-- Tiêu đề -->
+        <h2 class="section-title reveal">Liên hệ với tôi</h2>
+        <p class="section-sub reveal">Mở cho các cơ hội thực tập &amp; việc làm Frontend. Hãy để lại lời nhắn!</p>
+
+        <div class="contact-wrapper reveal">
+
+          <!-- Cột trái: thông tin liên hệ -->
+          <div class="contact-info">
+            <h3 class="contact-info-title">Thông tin liên hệ</h3>
+            <p class="contact-info-desc">Đừng ngần ngại liên hệ với tôi qua các kênh bên dưới hoặc điền form để gửi tin nhắn trực tiếp.</p>
+
+            <ul class="contact-channels">
+              <li class="contact-channel-item">
+                <span class="channel-icon" aria-hidden="true">✉</span>
+                <div>
+                  <span class="channel-label">Email</span>
+                  <a href="mailto:zenotnhan@gmail.com" class="channel-value">zenotnhan@gmail.com</a>
+                </div>
+              </li>
+              <li class="contact-channel-item">
+                <span class="channel-icon" aria-hidden="true">⌥</span>
+                <div>
+                  <span class="channel-label">GitHub</span>
+                  <a href="https://github.com/Kopinchon" target="_blank" rel="noopener" class="channel-value">github.com/Kopinchon</a>
+                </div>
+              </li>
+              <li class="contact-channel-item">
+                <span class="channel-icon" aria-hidden="true">❖</span>
+                <div>
+                  <span class="channel-label">LinkedIn</span>
+                  <a href="#" class="channel-value">Trần Lưu Thiện Nhân</a>
+                </div>
+              </li>
+              <li class="contact-channel-item">
+                <span class="channel-icon" aria-hidden="true">📍</span>
+                <div>
+                  <span class="channel-label">Địa chỉ</span>
+                  <span class="channel-value">Hà Nội, Việt Nam</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Dòng trang trí -->
+            <div class="contact-deco-orb" aria-hidden="true"></div>
+          </div>
+
+          <!-- Cột phải: form liên hệ -->
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="cf-name">Họ &amp; Tên <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">👤</span>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="cf-name"
+                  name="name"
+                  placeholder="Nguyễn Văn A"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <span class="form-error" id="err-name" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cf-email">Email <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">✉</span>
+                <input
+                  class="form-input"
+                  type="email"
+                  id="cf-email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+              <span class="form-error" id="err-email" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cf-subject">Chủ đề</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">📌</span>
+                <input
+                  class="form-input"
+                  type="text"
+                  id="cf-subject"
+                  name="subject"
+                  placeholder="Hợp tác / Thực tập / Dự án..."
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="cf-message">Tin nhắn <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrap textarea-wrap">
+                <span class="input-icon input-icon-top" aria-hidden="true">💬</span>
+                <textarea
+                  class="form-input form-textarea"
+                  id="cf-message"
+                  name="message"
+                  placeholder="Xin chào! Tôi muốn..."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <span class="form-error" id="err-message" role="alert"></span>
+            </div>
+
+            <button class="btn btn-primary btn-send" type="submit">
+              <span class="btn-send-text">Gửi tin nhắn</span>
+              <span class="btn-send-icon" aria-hidden="true">🚀</span>
+            </button>
+
+            <!-- Thông báo gửi thành công -->
+            <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+              <span class="success-icon" aria-hidden="true">✅</span>
+              <p>Cảm ơn bạn! Tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+            </div>
+          </form>
+
+        </div><!-- /.contact-wrapper -->
       </div>
     </section>
 
@@ -196,6 +315,92 @@
     </div>
   </footer>
 
+<script>
+  /* ── Scroll Reveal ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal, .reveal-child').forEach(el => observer.observe(el));
+
+  /* ── Header scroll shrink ── */
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 20
+      ? '0 2px 0 rgba(124,58,237,0.5), 0 8px 32px rgba(0,0,0,0.6)'
+      : '0 1px 0 rgba(124,58,237,0.3), 0 4px 24px rgba(0,0,0,0.4)';
+  }, { passive: true });
+
+  /* ── Contact Form Validation & Submit ── */
+  const form = document.getElementById('contactForm');
+  if (form) {
+    const inputs = form.querySelectorAll('.form-input');
+
+    /* Hiệu ứng focus glow */
+    inputs.forEach(inp => {
+      inp.addEventListener('focus', () => inp.closest('.input-wrap').classList.add('focused'));
+      inp.addEventListener('blur',  () => inp.closest('.input-wrap').classList.remove('focused'));
+      inp.addEventListener('input', () => clearErr(inp));
+    });
+
+    function clearErr(inp) {
+      const errId = 'err-' + inp.id.replace('cf-', '');
+      const errEl = document.getElementById(errId);
+      if (errEl) errEl.textContent = '';
+      inp.closest('.input-wrap').classList.remove('has-error');
+    }
+
+    function showErr(inp, msg) {
+      const errId = 'err-' + inp.id.replace('cf-', '');
+      const errEl = document.getElementById(errId);
+      if (errEl) errEl.textContent = msg;
+      inp.closest('.input-wrap').classList.add('has-error');
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+
+      const name = form.querySelector('#cf-name');
+      const email = form.querySelector('#cf-email');
+      const msg = form.querySelector('#cf-message');
+
+      if (!name.value.trim()) {
+        showErr(name, '⚠ Vui lòng nhập họ & tên.'); valid = false;
+      }
+      if (!email.value.trim()) {
+        showErr(email, '⚠ Vui lòng nhập email.'); valid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        showErr(email, '⚠ Email không hợp lệ.'); valid = false;
+      }
+      if (!msg.value.trim()) {
+        showErr(msg, '⚠ Vui lòng nhập tin nhắn.'); valid = false;
+      }
+
+      if (!valid) return;
+
+      /* Giả lập gửi (không có backend) */
+      const btn = form.querySelector('.btn-send');
+      btn.disabled = true;
+      btn.querySelector('.btn-send-text').textContent = 'Đang gửi...';
+
+      setTimeout(() => {
+        form.reset();
+        btn.disabled = false;
+        btn.querySelector('.btn-send-text').textContent = 'Gửi tin nhắn';
+        const successEl = document.getElementById('formSuccess');
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        setTimeout(() => { successEl.hidden = true; }, 5000);
+      }, 1200);
+    });
+  }
+</script>
 </body>
 
 </html>
